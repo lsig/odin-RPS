@@ -24,15 +24,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function playGame() {
     for (let i = 0; i < 5; i++) {
-        const playerSel = input();
+        const playerSel = getInput();
         const computerSel = computerPlay();
         console.log(playRound(playerSel, computerSel));
     }
 }
 
-function input() {
+function getInput() {
      let playerSel = prompt('Select rock, paper or scissors');
      while (!(playerSel.toLowerCase() === 'rock' 
      || playerSel.toLowerCase() === 'paper' 
@@ -42,4 +42,4 @@ function input() {
      return playerSel;
 }
 
-game();
+playGame();
